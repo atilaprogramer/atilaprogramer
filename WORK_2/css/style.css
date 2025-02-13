@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700|Open+Sans:400,700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:rgb(240, 240, 240);
+    font-family:sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-image: linear-gradient(to bottom, #834a4a, #264249); 
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    background-image: linear-gradient(to bottom, #c9adb6, #b8807c); 
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    letter-spacing: 2px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700; 
+    color: rgb(233, 224, 224); 
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(136, 99, 99); 
+    padding: 10px;
+}
+
+nav .menu-icon {
+    display: none;
+    font-size: 24px;
+    color: #fff; 
+    cursor: pointer;
+}
+
+nav a {
+    padding: 10px 20px;
+    margin: 0 10px;
+    letter-spacing: 2px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    color: #fff; 
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: rgb(114, 72, 72); 
+    border-bottom: 2px solid #fff; 
+}
+
+#members {
+    max-width: 50%; 
+    height: auto;
+    margin: 20px 0; 
+    border-radius: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px double rgb(39, 39, 39); 
+    justify-content: center;
+    background-color: #fff; 
+    width: 80%;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    border: 3px solid rgb(26, 25, 25);
+    padding: 10px;
+    color: rgb(0, 0, 0); 
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
+    font-weight: 700;
+    background-color: #af7360; 
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+}
+
+h2 i {
+    margin-right: 10px;
+}
+
+ol {
+    width: 75%;
+    list-style-position: inside;
+    padding: 10px;
+}
+
+li {
+    color: #333; 
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    margin: 5px 0;
+}
+
+.playlist {
+    display: flex;
+    justify-content: center;
+    background-color: #e0e0e0; 
+    width: 65%;
+    margin: 20px auto;
+    padding: 10px;
+    border: 3px solid #333; 
+    border-radius: 10px;
+}
+
+#spotify, #youtube {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+#spotify {
+    background-color: #6d515c; 
+}
+
+#youtube {
+    background-color: #696262; 
+}
+
+#spotify:hover {
+    background-color: #0a090a; 
+    border: 2px solid #7106eb; 
+}
+
+#youtube:hover {
+    background-color: #000000; 
+    border: 2px solid #8500f1; 
+}
+
+
+footer {
+    background-color: #af7360; 
+    color: #fff; 
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #8b0000; 
+    color: #fff; 
+    padding: 10px;
+    border-radius: 50%;
+    text-align: center;
+    display: none;
+    transition: background-color 0.3s ease;
+}
+
+#back-to-top:hover {
+    background-color: #800000; 
+}
+
+
+body.scrolled #back-to-top {
+    display: block;
+}
+
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav .menu-icon {
+        display: block;
+    }
+
+    nav a {
+        display: none;
+    }
+
+    nav a.active {
+        display: block;
+    }
+
+    section {
+        width: 100%;
+    }
+
+    .playlist {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    li {
+        font-size: 20px;
+    }
+
+    #spotify, #youtube {
+        padding: 8px;
+        margin: 3px;
+    }
+}
